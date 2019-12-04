@@ -1,0 +1,13 @@
+.mat-toolbar {
+    background-color: blue;
+}
+.menu {
+    position: relative;
+    left: 50px;
+    top: 150px;
+    background-color:burlywood;
+}
+
+.card {
+    background-color: pink;
+}
