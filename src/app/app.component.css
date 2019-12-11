@@ -1,13 +1,23 @@
 .mat-toolbar {
-    background-color: blue;
-}
-.menu {
-    position: relative;
-    left: 50px;
-    top: 150px;
-    background-color:burlywood;
+    background: linear-gradient(to left,  #e66465, #9198e5);
+    margin-block-end: auto;
+    margin-block-start: auto;
 }
 
-.card {
-    background-color: pink;
+.mat-button {
+    margin-inline-start: 60px;
+    font-size: medium;
 }
+
+.example-card {
+    margin-block-start: 25px;
+    max-width: 400px;
+    margin-inline-start: 480px;
+
+}
+  
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+  

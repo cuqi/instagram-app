@@ -1,12 +1,51 @@
-<mat-toolbar class = "mat-toolbar">
-  <button (onclick) = "window.close()" mat-button>Blabla
+<mat-toolbar class="mat-toolbar">
+  <button class="mat-button" (onclick)="myLog()" mat-button>Home
   </button>
-
 </mat-toolbar>
 
-<button mat-button [matMenuTriggerFor]="menu" class = "menu">Menu</button>
-<mat-menu #menu="matMenu" class = "menu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>*username*</mat-card-title>
+    <mat-card-subtitle>*location*</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      *comment section*
+    </p>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Leave a comment"></textarea>
+        </mat-form-field>
+      </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
 
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>*username*</mat-card-title>
+    <mat-card-subtitle>*location*</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      *comment section*
+    </p>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Leave a comment"></textarea>
+      </mat-form-field>
+    </form>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
