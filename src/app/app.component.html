@@ -1,6 +1,15 @@
 <mat-toolbar class="mat-toolbar">
-  <button class="mat-button" mat-button>Home
+  <button class="mat-button" mat-button>
+      <mat-icon class = "mat-icon" aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+    Home 
   </button>
+  <mat-form-field class="example-form-field">
+      <input matInput type="text" placeholder="Search">
+      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  
 </mat-toolbar>
 
 <mat-card class="example-card">
