@@ -1,12 +1,29 @@
 .mat-toolbar {
-    background: linear-gradient(to left,  #e66465, #9198e5);
+    background: linear-gradient(to left,  #00ff77, #003EFF);
     margin-block-end: auto;
     margin-block-start: auto;
+    color: white;
+    box-shadow: 1px 2px #bc57fa;
+    padding: 10px;
+}
+
+.mat-icon {
+    margin-bottom: 3px;
 }
 
 .mat-button {
     margin-inline-start: 60px;
     font-size: x-large;
+}
+
+.mat-button:hover {
+    opacity: 80%;
+}
+
+.example-form-field {
+    height: 10px;
+    block-size: 65px;
+    margin-inline-start: 800px;
 }
 
 .example-card {
