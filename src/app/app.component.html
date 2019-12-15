@@ -1,8 +1,10 @@
+<div>
 <mat-toolbar class="mat-toolbar">
-  <button class="mat-button" mat-button>
-      <mat-icon class = "mat-icon" aria-hidden="false" aria-label="Example home icon">home</mat-icon>
-    Home 
+  <button class="mat-button" mat-button >
+    <img src="favicon.ico" height="50px" width="50px" >
+    Home
   </button>
+
   <mat-form-field class="example-form-field">
       <input matInput type="text" placeholder="Search">
       <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
@@ -12,10 +14,8 @@
   
 </mat-toolbar>
 
-<app-post>
+<app-post *ngFor = "let varposts of total" [posts] = "varposts" >
 
 </app-post>
 
-<app-post>
-
-</app-post>
+</div>
