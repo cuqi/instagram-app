@@ -8,8 +8,13 @@ import { Posts } from '../db-data';
 })
 
 export class AppComponent {
+
+  total = Posts;
+
   title = 'feit-instagram-app';
+
   myPosts =  Posts;
+
   public myLog() {
     console.log("what now?");
   }

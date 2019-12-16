@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PostDetails } from '../model/postDetails';
 
 
@@ -12,7 +12,7 @@ export class PostComponent implements OnInit {
   constructor() { }
 
   @Input()
-    post: PostDetails;
+  posts: PostDetails;
 
   ngOnInit() {
   }

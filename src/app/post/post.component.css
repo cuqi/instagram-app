@@ -1,6 +1,15 @@
 .example-card {
+    margin: auto;
+    width: 500px;
     margin-block-start: 50px;
     margin-block-end: 50px;
-    margin-inline-start: 600px;
-    margin-inline-end: 600px;
+
+    /* margin-inline-start: 600px;
+    margin-inline-end: 600px; */
+    
+}
+
+em {
+    font-weight: bold;
+
 }

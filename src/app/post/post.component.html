@@ -1,15 +1,30 @@
-<mat-card class="example-card">
+<div *ngIf = "posts" >
+
+<mat-card class="example-card" >
+
         <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{myPosts[0].username}}</mat-card-title>
-          <mat-card-subtitle>*location*</mat-card-subtitle>
+          <div mat-card-avatar class="example-header-image">
+              <img mat-card-image class = "iconUrl" [src]="posts.iconUrl" alt="Photo of a Shiba Inu" >
+          </div>
+          <mat-card-title>{{posts.username}}</mat-card-title>
+          <mat-card-subtitle>Earth C-137</mat-card-subtitle>
         </mat-card-header>
-        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
-        <img mat-card-image src="https://images.pexels.com/photos/434090/pexels-photo-434090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Photo of a Shiba Inu">
+
+        <img mat-card-image [src]="posts.imageUrl" alt="Photo of a Shiba Inu">
+
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+
         <mat-card-content>
-          <p>
-            *comment section*
+          <p *ngIf = "posts.description">
+            <em>
+            {{posts.username}}: 
+            </em>
+            {{posts.description}}
           </p>
+
           <form class="example-form">
             <mat-form-field class="example-full-width">
               <textarea matInput placeholder="Leave a comment"></textarea>
@@ -17,9 +32,7 @@
           </form>
       
         </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-      
+
+ </mat-card>
+
+</div>
