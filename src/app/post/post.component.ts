@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { PostDetails } from '../model/postDetails';
 
 
 @Component({
@@ -9,6 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class PostComponent implements OnInit {
 
   constructor() { }
+
+  @Input()
+    post: PostDetails;
 
   ngOnInit() {
   }
