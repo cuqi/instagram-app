@@ -9,9 +9,19 @@
     
 }
 
+.example-card-dark {
+    margin: auto;
+    width: 500px;
+    margin-block-start: 50px;
+    margin-block-end: 50px;
+    background-color: #020238 ;
+    /* margin-inline-start: 600px;
+    margin-inline-end: 600px; */
+    
+}
+
 em {
     font-weight: bold;
-
 }
 
 .example-header-image {
