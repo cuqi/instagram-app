@@ -1,20 +1,25 @@
 <div>
-<mat-toolbar class="mat-toolbar">
-  <button class="mat-button" mat-button >
+<mat-toolbar class="mat-toolbar" id = "toolbar">
+  <button class="mat-button" mat-button id = "homebutton">
     <img src="favicon.ico" height="50px" width="50px" >
     Home
   </button>
 
-  <mat-form-field class="example-form-field">
+  <mat-form-field class="example-form-field" id = "searchbar">
       <input matInput type="text" placeholder="Search">
       <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
         <mat-icon>close</mat-icon>
       </button>
     </mat-form-field>
+
+    <label class="switch" >
+      <input id = "isDark" type="checkbox" (click) = "checkbox1()">
+      <span class="slider round"></span>
+    </label>
   
 </mat-toolbar>
 
-<app-post *ngFor = "let varposts of total" [posts] = "varposts" >
+<app-post  id = "post" *ngFor = "let varposts of total" [posts] = "varposts" >
 
 </app-post>
 
