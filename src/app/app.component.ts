@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Posts} from '../db-data';
+import { Posts } from '../db-data';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +12,10 @@ export class AppComponent {
   total = Posts;
 
   title = 'feit-instagram-app';
-  
+
+  myPosts =  Posts;
+
   public myLog() {
     console.log("what now?");
   }
-
 }
