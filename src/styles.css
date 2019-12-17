@@ -4,4 +4,8 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Verdana, "Helvetica Neue", sans-serif; }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Verdana, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Verdana, "Helvetica Neue", sans-serif; background-color: #F3EDDE;}
+
+.dark{
+    background-color: #020238;
+}

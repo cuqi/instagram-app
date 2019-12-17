@@ -109,3 +109,16 @@
   .slider.round:before {
     border-radius: 50%;
   }
+
+.darkbackground{
+  background-color: #020238;
+}
+
+.darkfont{
+  color: #020238;
+}
+
+
+
+
+
