@@ -3,6 +3,7 @@
     width: 500px;
     margin-block-start: 50px;
     margin-block-end: 50px;
+    background-color: white;
 
     /* margin-inline-start: 600px;
     margin-inline-end: 600px; */
@@ -14,7 +15,7 @@
     width: 500px;
     margin-block-start: 50px;
     margin-block-end: 50px;
-    background-color: #020238 ;
+    background-color: #222269 ;
     /* margin-inline-start: 600px;
     margin-inline-end: 600px; */
     
@@ -44,4 +45,8 @@ em {
 
 .share-button:active {
     background-color: rgb(214, 89, 214);
+}
+
+.font{
+     color: rgba(255, 222, 173, 0.568);
 }

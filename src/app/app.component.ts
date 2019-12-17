@@ -19,23 +19,26 @@ export class AppComponent {
     console.log("what now?");
   }
 flag = true;
- checkbox1(){
+ checkbox1(){  //DarkMode
 
-    if(this.flag)
-    {
-      document.getElementById("mainHTML").style.backgroundColor = "#020238";
+      document.getElementById("mainHTML").classList.toggle('dark');      //menjanje na celata pozadina 
+      var d = document.getElementsByClassName("example-card");        //individualnite postovi
+      for(let i =0; i<d.length;i++)
+      {
+        d[i].classList.toggle("example-card-dark");
+        d[i].classList.toggle("font");
+      }
+      document.getElementById("toolbar").classList.toggle('mat-toolbar-dark');     //toolbar gore
+      document.getElementById("homebutton").classList.toggle('darkfont');  //home kopceto vo toolbarot
+      document.getElementById("searchbar").classList.toggle('darkfont');      //search barot vo toolbarot
+
+      if(this.flag == true){
+      document.getElementById("logo").src = "assets/icon.ico";
       this.flag = false;
-      document.getElementById("toolbar").classList.add('mat-toolbar-dark');
-      document.getElementById("homebutton").style.color = "#020238";
-      document.getElementById("searchbar").style.color = "#020238";
-    }
-    else{
-      document.getElementById("mainHTML").style.backgroundColor = "#F3EDDE";
+      }
+      else{
+      document.getElementById("logo").src = "favicon.ico";
       this.flag = true;
-      document.getElementById("homebutton").style.color = "#d659d6";
-      document.getElementById("toolbar").classList.remove('mat-toolbar-dark');
-      document.getElementById("searchbar").style.color = "#d659d6";
-    }
-    console.log("kalajasfh");
-  }
+      }
+}
 }
