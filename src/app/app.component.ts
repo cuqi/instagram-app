@@ -34,11 +34,11 @@ export class AppComponent {
 
     if (this.flag == true) {
       document.getElementById("logo").src = "assets/icon.ico";
-      this.flag = false;
+      this.flag = false; 
     }
     else {
       document.getElementById("logo").src = "favicon.ico";
       this.flag = true;
-    }
+      }
   }
-}
+} 
