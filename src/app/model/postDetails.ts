@@ -1,4 +1,8 @@
 
+export interface PostComments {
+    username: string;
+    comment: string;
+}
 
 export interface PostDetails {
     id: number;
@@ -6,8 +10,9 @@ export interface PostDetails {
     iconUrl: string;
     imageUrl: string;
     username: string;
-    comments: number;
+    comments: PostComments[];
     likes: number;
 
     //likedby: string[];
 }
+

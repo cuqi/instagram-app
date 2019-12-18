@@ -50,3 +50,7 @@ em {
 .font{
      color: rgba(255, 222, 173, 0.568);
 }
+
+.comment-button {
+    margin-inline-start: 200px;
+}

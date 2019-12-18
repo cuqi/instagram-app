@@ -1,38 +1,40 @@
-<div *ngIf = "posts" >
+<div *ngIf="posts">
 
-<mat-card class="example-card" id = "post" >
+  <mat-card class="example-card" id="post">
 
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image">
-              <img mat-card-image class = "iconUrl" [src]="posts.iconUrl" alt="Photo of a Shiba Inu" >
-          </div>
-          <mat-card-title>{{posts.username}}</mat-card-title>
-          <mat-card-subtitle>Earth C-137</mat-card-subtitle>
-        </mat-card-header>
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image">
+        <img mat-card-image class="iconUrl" [src]="posts.iconUrl" alt="Photo of a Shiba Inu">
+      </div>
+      <mat-card-title>{{posts.username}}</mat-card-title>
+      <mat-card-subtitle>Earth C-137</mat-card-subtitle>
+    </mat-card-header>
 
-        <img mat-card-image [src]="posts.imageUrl" alt="Photo of a Shiba Inu">
+    <img mat-card-image [src]="posts.imageUrl" alt="Photo of a Shiba Inu">
 
-        <mat-card-actions>
-          <button mat-button class = "like-button">LIKE</button>
-          <button mat-button class = "share-button">SHARE</button>
-        </mat-card-actions>
+    <mat-card-actions>
+      <button mat-button class="like-button">LIKE</button>
+      <button mat-button class="share-button">SHARE</button>
+    </mat-card-actions>
 
-        <mat-card-content>
-          <p *ngIf = "posts.description">
-            <em>
-            {{posts.username}}: 
-            </em>
-            {{posts.description}}
-          </p>
+    <mat-card-content>
+      <p *ngIf="posts.description">
+        <em>
+          {{posts.username}}:
+        </em>
+        {{posts.description}}
+      </p>
 
-          <form class="example-form">
-            <mat-form-field class="example-full-width">
+      <p *ngFor = "let number of posts.comments">
+        <em>{{number.username}}</em>: {{number.comment}} 
+      </p>
+
+      <mat-form-field class="example-full-width">
               <textarea matInput placeholder="Leave a comment"></textarea>
-            </mat-form-field>
-          </form>
-      
-        </mat-card-content>
+      </mat-form-field>
 
- </mat-card>
+    </mat-card-content>
+
+  </mat-card>
 
 </div>
