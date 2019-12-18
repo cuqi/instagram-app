@@ -40,5 +40,5 @@ export class AppComponent {
       document.getElementById("logo").src = "favicon.ico";
       this.flag = true;
       }
-}
+  }
 } 
