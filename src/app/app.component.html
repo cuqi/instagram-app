@@ -5,12 +5,19 @@
     Home
   </button>
 
-  <mat-form-field class="example-form-field" id = "searchbar">
-      <input matInput type="text" placeholder="Search">
+  <form class="example-form-field" #search = "ngForm" (ngSubmit) = "onClickSubmit(search.value)" >
+    <input type = "text" name = "search" placeholder = "search" ngModel>
+    <input type = "submit" value = "submit">
+  </form>
+
+
+  <!-- <mat-form-field #login = "ngForm" (ngSubmit) = "onClickSubmit(login.value)" class="example-form-field" id = "searchbar">
+      <input matInput type="text" name = "search" placeholder="Search">
+      <input matInput type="submit" value = "submit">
       <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
         <mat-icon>close</mat-icon>
       </button>
-    </mat-form-field>
+    </mat-form-field> -->
 
     <label class="switch" >
       <input id = "isDark" type="checkbox" (click) = "checkbox1()">
