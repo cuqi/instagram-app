@@ -53,6 +53,7 @@
     display: inline-block;
     width: 50px;
     height: 29px;
+    margin-inline-start: auto;
   }
   
   /* Hide default HTML checkbox */
@@ -118,7 +119,10 @@
   color: #020238;
 }
 
-
+.no{
+  background-color: rgba(0, 0, 139, 0);
+  color: rgba(0, 64, 255, 0);
+}
 
 
 
