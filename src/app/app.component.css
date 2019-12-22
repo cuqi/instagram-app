@@ -29,9 +29,10 @@
 }
 
 .example-form-field {
-    height: 10px;
     block-size: 65px;
-    margin-inline-start: 800px;
+    margin-inline-start: 1000px;
+    margin-block-start: 35px;
+    margin-inline-end: 300px;
     color: #bc57fa;
 }
 

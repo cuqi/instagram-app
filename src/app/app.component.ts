@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Posts } from '../db-data';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,29 +15,32 @@ export class AppComponent {
 
   myPosts = Posts;
 
-  public myLog() {
-    console.log("what now?");
+  ngInit() {
+
+  }
+
+  onClickSubmit(formData) {
+    alert('You searched for: ' + formData.search + ', but this webpage is basic, sorry!');
   }
   flag = true;
-  checkbox1() {  //DarkMode
-
-    document.getElementById("mainHTML").classList.toggle('dark');      //menjanje na celata pozadina 
-    var d = document.getElementsByClassName("example-card");        //individualnite postovi
+  checkbox1() {  // DarkMode
+    
+    document.getElementById('mainHTML').classList.toggle('dark');      // menjanje na celata pozadina
+    var d = document.getElementsByClassName('example-card');        // individualnite postovi
     for (let i = 0; i < d.length; i++) {
-      d[i].classList.toggle("example-card-dark");
-      d[i].classList.toggle("font");
+      d[i].classList.toggle('example-card-dark');
+      d[i].classList.toggle('font');
     }
-    document.getElementById("toolbar").classList.toggle('mat-toolbar-dark');     //toolbar gore
-    document.getElementById("homebutton").classList.toggle('darkfont');  //home kopceto vo toolbarot
-    document.getElementById("searchbar").classList.toggle('darkfont');      //search barot vo toolbarot
+    document.getElementById('toolbar').classList.toggle('mat-toolbar-dark');     // toolbar gore
+    document.getElementById('homebutton').classList.toggle('darkfont');  // home kopceto vo toolbarot
+    document.getElementById('searchbar').classList.toggle('darkfont');      // search barot vo toolbarot
 
-    if (this.flag == true) {
-      document.getElementById("logo").src = "assets/icon.ico";
-      this.flag = false; 
-    }
-    else {
-      document.getElementById("logo").src = "favicon.ico";
+    if (this.flag === true) {
+      (<HTMLImageElement>document.getElementById('logo')).src = "assets/icon.ico";
+      this.flag = false;
+    } else {
+      (<HTMLImageElement>document.getElementById('logo')).src = "favicon.ico";
       this.flag = true;
-      }
+    }
   }
-} 
+}
