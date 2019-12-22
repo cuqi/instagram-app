@@ -53,4 +53,11 @@ em {
 
 .comment-button {
     margin-inline-start: 200px;
+    
+}
+
+.post-comment {
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }

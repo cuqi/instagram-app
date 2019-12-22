@@ -13,12 +13,13 @@
 
     <img mat-card-image [src]="posts.imageUrl" alt="Photo of a Shiba Inu">
 
-    <mat-card-actions>
-      <button mat-button class="like-button">LIKE</button>
+    <mat-card-actions #group = "matCardActions">
+      <button mat-button value = "You like this!" class="like-button" (click) = "onLike()">LIKE</button>
       <button mat-button class="share-button">SHARE</button>
     </mat-card-actions>
 
     <mat-card-content>
+      <div id = "divLikes">{{group.value}}</div> 
       <p *ngIf="posts.description">
         <em>
           {{posts.username}}:
@@ -37,7 +38,7 @@
       
 
       <form #comment = "ngForm" (ngSubmit) = "onClickSubmit(comment.value)" >
-        <input type = "text" name = "comment" placeholder = "Write something" ngModel>
+        <input class = "post-comment" type = "text" name = "comment" placeholder = "Write something" ngModel>
         <input type = "submit" value = "submit">
       </form>
       
