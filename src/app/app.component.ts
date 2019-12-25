@@ -45,7 +45,7 @@ export class AppComponent {
     document.getElementById('homebutton').classList.toggle('darkfont');  // home kopceto vo toolbarot
     document.getElementById('searchbar').classList.toggle('darkfont');      // search barot vo toolbarot
 
-    if (this.flag == true) {
+    if (this.flag === true) {
       (<HTMLImageElement>document.getElementById('logo')).src = "assets/icon.ico";
       this.flag = false;
     } else {

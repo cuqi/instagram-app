@@ -9,6 +9,8 @@ import { generate, from } from 'rxjs';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
+  @Input()
+  posts: PostDetails;
 
   clicked: number = 1;
 
@@ -33,8 +35,6 @@ export class PostComponent implements OnInit {
   }
   constructor() {  }
 
-  @Input()
-  posts: PostDetails;
 
   ngOnInit() {
   }

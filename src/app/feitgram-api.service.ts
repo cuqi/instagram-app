@@ -11,6 +11,6 @@ export class FeitgramApiService {
   constructor(private http: HttpClient) { }
 
   getPosts(): Observable<PostDetails[]> {
-    return this.http.get<PostDetails[]>("http://5dfbcd3d0301690014b8fff9.mockapi.io/PostDetails")
+    return this.http.get<PostDetails[]>("http://5dfbcd3d0301690014b8fff9.mockapi.io/PostDetails") // lokalnata baza e irelevantna, postovite gi vlece od linkov 
   }
 }
