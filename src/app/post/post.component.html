@@ -11,15 +11,18 @@
       <mat-card-subtitle>Earth C-137</mat-card-subtitle>
     </mat-card-header>
 
-    <img mat-card-image [src]="posts.imageUrl" alt="Photo of a Shiba Inu">
-
+    <img mat-card-image id="postimg" [src]="posts.imageUrl" alt="Photo of a Shiba Inu" (dblclick)="onLike()">
+    <div *ngIf="posts.flaglike">
+      <img mat-card-image class = 'heartImg' src='/assets/heart.png' alt='You already liked this'>
+    </div>
+    
     <mat-card-actions #group = "matCardActions">
+    <em class = "liked" *ngIf="posts.likes &gt; 0">{{posts.likes}}</em>
       <button mat-button value = "You like this!" class="like-button" (click) = "onLike()">LIKE</button>
       <button mat-button class="share-button">SHARE</button>
     </mat-card-actions>
 
     <mat-card-content>
-      <div id = "divLikes">{{group.value}}</div> 
       <p *ngIf="posts.description">
         <em>
           {{posts.username}}:
@@ -27,19 +30,14 @@
         {{posts.description}}
       </p>
 
-      <p id = "div1" *ngFor = "let number of posts.comments">
-        <em>{{number.username}}</em>: {{number.comment}} 
+      <p id = 'div+posts.id' *ngFor = "let number of posts.comments">
+        <em>{{number.username}}:</em> {{number.comment}} 
       </p>
-      <!-- <div id = "div1">The text here is created dynamically</div> -->
-
-      <!-- <mat-form-field class="example-full-width">
-              <textarea matInput placeholder="Leave a comment"></textarea>
-      </mat-form-field> -->
       
 
       <form #comment = "ngForm" (ngSubmit) = "onClickSubmit(comment.value)" >
-        <input class = "post-comment" type = "text" name = "comment" placeholder = "Write something" ngModel>
-        <input type = "submit" value = "submit">
+        <input id="reset" class = "post-comment" type = "text" name = "comment" placeholder = "Write something" ngModel>
+        <input type = "submit" value = "Comment" class="commentbutton">
       </form>
       
 
