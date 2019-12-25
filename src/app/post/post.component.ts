@@ -9,8 +9,8 @@ import { NgForm } from '@angular/forms';
 })
 export class PostComponent implements OnInit {
 
+  clicked: number = 1;
 
-  clicked: number = 0;
   onClickSubmit(formData) {
 
     let newDiv= document.createElement('div');
@@ -22,13 +22,25 @@ export class PostComponent implements OnInit {
 
   onLike() {
 
-
     let newDiv = document.createElement('div');
     let newContent = document.createTextNode('You like this post!');
     newDiv.appendChild(newContent);
     let currentDiv = document.getElementById('divLikes');
-    currentDiv.parentNode.insertBefore(newDiv, currentDiv);
-    
+    currentDiv.setAttribute("id", "likeDiv");
+
+    if (this.clicked === 1) {
+      currentDiv.parentNode.insertBefore(newDiv, currentDiv);
+      //currentDiv.setAttribute('id', 'likeDiv');
+      this.clicked = 0;
+    }
+    else {
+      console.log('else');
+      let empty = document.createElement('div');
+      let emptyContent = document.createTextNode('');
+      empty.appendChild(emptyContent);
+      currentDiv.replaceWith(empty);
+      this.clicked = 1;
+    }
   }
   constructor() { }
 

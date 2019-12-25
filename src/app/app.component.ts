@@ -24,7 +24,6 @@ export class AppComponent {
   }
   flag = true;
   checkbox1() {  // DarkMode
-    
     document.getElementById('mainHTML').classList.toggle('dark');      // menjanje na celata pozadina
     var d = document.getElementsByClassName('example-card');        // individualnite postovi
     for (let i = 0; i < d.length; i++) {
