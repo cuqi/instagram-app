@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Posts } from '../db-data';
+import { FeitgramApiService } from './feitgram-api.service';
+import { PostDetails } from './model/postDetails';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +10,15 @@ import { Posts } from '../db-data';
 })
 
 export class AppComponent {
-
-  total = Posts;
-
   title = 'feit-instagram-app';
+  //total = Posts;
+  thePosts: PostDetails[] = [];
 
+  constructor(public apiService: FeitgramApiService) {
+    this.apiService.getPosts().subscribe((recievedPosts) => {
+      this.thePosts = recievedPosts;
+    });
+  }
   myPosts = Posts;
 
   ngInit() {
@@ -24,7 +30,6 @@ export class AppComponent {
   }
   flag = true;
   checkbox1() {  // DarkMode
-    
     document.getElementById('mainHTML').classList.toggle('dark');      // menjanje na celata pozadina
     var d = document.getElementsByClassName('example-card');        // individualnite postovi
     var dd = document.getElementsByClassName('commentbutton');
@@ -40,7 +45,7 @@ export class AppComponent {
     document.getElementById('homebutton').classList.toggle('darkfont');  // home kopceto vo toolbarot
     document.getElementById('searchbar').classList.toggle('darkfont');      // search barot vo toolbarot
 
-    if (this.flag == true) {
+    if (this.flag === true) {
       (<HTMLImageElement>document.getElementById('logo')).src = "assets/icon.ico";
       this.flag = false;
     } else {
