@@ -1,24 +1,24 @@
 <div>
-<mat-toolbar class="mat-toolbar" id = "toolbar">
-  <button class="mat-button" mat-button id = "homebutton">
-    <img src="favicon.ico" height="50px" width="50px" id = "logo">
-    Home
-  </button>
-
-  <form #search = "ngForm" (ngSubmit) = "onClickSubmit(search.value)">
-    <input class="example-form-field" type = "text" name = "search" placeholder = "search"  id = "searchbar" >
-    <!-- <input type = "submit" value = "submit">  Za da ne se gleda submit kopceto tuku samo so enter da si raboti -->
-  </form>
+  <mat-toolbar class="mat-toolbar" id="toolbar">
     
-    <label class="switch" >
-      <input id = "isDark" type="checkbox" (click) = "checkbox1()">
+    <button class="mat-button" mat-button id="homebutton">
+      <img src="favicon.ico" height="50px" width="50px" id="logo">
+      Home
+    </button>
+
+    <form #search="ngForm" (ngSubmit)="onClickSubmit(search.value)">
+      <input class="example-form-field" type="text" name="search" placeholder="search" id="searchbar">
+      <!-- <input type = "submit" value = "submit">  Za da ne se gleda submit kopceto tuku samo so enter da si raboti -->
+    </form>
+
+    <label class="switch">
+      <input id="isDark" type="checkbox" (click)="checkbox1()">
       <span class="slider round"></span>
     </label>
-  
-</mat-toolbar>
 
-<app-post *ngFor = "let varposts of total" [posts] = "varposts" >
+  </mat-toolbar>
 
-</app-post>
+  <app-post *ngFor="let varposts of total" [posts]="varposts">
+  </app-post>
 
-</div> 
+</div>

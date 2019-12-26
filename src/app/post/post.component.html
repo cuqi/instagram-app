@@ -1,4 +1,3 @@
-
 <div *ngIf="posts">
 
   <mat-card class="example-card" id="post">
@@ -11,16 +10,16 @@
       <mat-card-subtitle class="location">Earth C-137</mat-card-subtitle>
     </mat-card-header>
 
-    <div class = "parent">
-    <img mat-card-image id="postimg" [src]="posts.imageUrl" alt="Photo of a Shiba Inu" (dblclick)="onLike()">
-    <div *ngIf="posts.flaglike" >
-      <img mat-card-image class = 'heartImg' src='/assets/heart.png' alt='You already liked this'>
+    <div class="parent">
+      <img mat-card-image id="postimg" [src]="posts.imageUrl" alt="Photo of a Shiba Inu" (dblclick)="onLike()">
+      <div *ngIf="posts.flaglike">
+        <img mat-card-image class='heartImg' src='/assets/heart.png' alt='You already liked this'>
+      </div>
     </div>
-    </div>
-    
-    <mat-card-actions #group = "matCardActions">
-    <em class = "liked" *ngIf="posts.likes &gt; 0">{{posts.likes}}</em>
-      <button mat-button value = "You like this!" class="like-button" (click) = "onLike()">LIKE</button>
+
+    <mat-card-actions #group="matCardActions">
+      <em class="liked" *ngIf="posts.likes &gt; 0">{{posts.likes}}</em>
+      <button mat-button value="You like this!" class="like-button" (click)="onLike()">LIKE</button>
       <button mat-button class="share-button">SHARE</button>
     </mat-card-actions>
 
@@ -32,20 +31,19 @@
         {{posts.description}}
       </p>
 
-      <p id = 'div+posts.id' *ngFor = "let number of posts.comments">
-        <em>{{number.username}}:</em> {{number.comment}} 
+      <p id='div+posts.id' *ngFor="let number of posts.comments">
+        <em>{{number.username}}:</em> {{number.comment}}
       </p>
-      
 
-      <form #comment = "ngForm" (ngSubmit) = "onClickSubmit(comment.value)" >
-        <input class = "post-comment" type = "text" name = "comment" placeholder = "Write something" ngModel>
-        <input type = "submit" value = "Comment" class="commentbutton">
+
+      <form #comment="ngForm" (ngSubmit)="onClickSubmit(comment.value)">
+        <input class="post-comment" type="text" name="comment" placeholder="Write something" ngModel>
+        <input type="submit" value="Comment" class="commentbutton">
       </form>
-      
+
 
     </mat-card-content>
 
   </mat-card>
 
 </div>
-
