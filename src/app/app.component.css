@@ -36,10 +36,19 @@
     margin: 8px 0;
     border: 0px;
     box-sizing: border-box;
-    color: black;
+    color: #d659d6;
     font-weight: bold;
-    margin-inline-start: 900px;
+    margin-inline-start: 910px;
     font-size: x-large;
+}
+
+::placeholder{
+  color: #d659d6;
+}
+
+.darkplaceholder::placeholder
+{
+  color: #020238;
 }
 
 .example-card {
@@ -78,7 +87,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #F3EDDE;
+    background-color: #020238;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -96,7 +105,7 @@
   }
   
   input:checked + .slider {
-    background-color: #020238;
+    background-color: #F3EDDE;
   }
   
   input:focus + .slider {
