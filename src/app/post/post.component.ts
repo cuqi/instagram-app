@@ -27,7 +27,6 @@ export class PostComponent implements OnInit {
     setTimeout(gg,500, this.posts);
     console.log(this.posts.flaglike);
     
-    
   }
   else
   {
