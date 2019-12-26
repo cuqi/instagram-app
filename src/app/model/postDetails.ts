@@ -18,13 +18,13 @@ export interface PostDetails {
     //likedby: string[];
 }
 
-export function gg(k: PostDetails) { // funkcija za "brishenje" na srceto pri like
-    k.flaglike = false;
+export function gg(k:PostDetails) { // funkcija za "brishenje" na srceto pri like
+    k.flaglike = false;    
 }
 
-export function addComment(k: PostDetails, comm: any) {      //funkcija za dodavanje na komentar
-    var el: PostComments = {username: '', comment: ''};
-    el.username = 'Filip Panchevski';
+export function addComment(k:PostDetails, comm: any) {      //funkcija za dodavanje na komentar
+    var el:PostComments = {username:"", comment:""};
+    el.username = "Filip Panchevski";
     el.comment = comm;
     k.comments.push(el);
 
