@@ -24,6 +24,7 @@ export function addComment(k: PostDetails, comm: any) {     // funkcija za dodav
     el.username = 'Filip Panchevski';
     el.comment = comm;
     k.comments.push(el);
+
 }
 
 
