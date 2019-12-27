@@ -18,7 +18,9 @@
 
   </mat-toolbar>
 
-  <app-post *ngFor="let varposts of thePosts" [posts]="varposts">
-  </app-post>
+  <cdk-virtual-scroll-viewport [itemSize]="700" style="height: 1000px">
+    <app-post *cdkVirtualFor="let varposts of thePosts" [posts]="varposts">
+    </app-post>
+  </cdk-virtual-scroll-viewport>
 
 </div>
