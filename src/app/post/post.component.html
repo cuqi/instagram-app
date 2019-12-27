@@ -30,6 +30,7 @@
         </em>
         {{posts.description}}
       </p>
+      <div *ngIf="posts.description" class = "spacer"></div>
 
       <p id='div+posts.id' *ngFor="let number of posts.comments">
         <em>{{number.username}}:</em> {{number.comment}}
