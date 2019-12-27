@@ -137,5 +137,34 @@ input:checked + .slider:before {
   color: rgba(0, 64, 255, 0);
 }
 
+cdk-virtual-scroll-viewport::-webkit-scrollbar
+{
+    width: 12px;
+    background: -webkit-gradient(linear,
+    left top,
+    left bottom,
+    color-stop(0.44, #00ff77),
+    color-stop(0.86, #003EFF));
+}
 
+cdk-virtual-scroll-viewport::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background: #d659d6;
+}
 
+.darkscroll::-webkit-scrollbar
+{
+  width: 12px;
+    background: -webkit-gradient(linear,
+    left top,
+    left bottom,
+    color-stop(0.44, #FF416C),
+    color-stop(0.86, #FF4B2B));
+}
+
+.darkscr::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background: navajowhite;
+}

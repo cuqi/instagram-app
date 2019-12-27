@@ -40,11 +40,14 @@ export class AppComponent {
       dddd[i].classList.toggle('locationfont');
 
     }
+    console.log(d.length);
 
     document.getElementById('toolbar').classList.toggle('mat-toolbar-dark');    // toolbar gore
     document.getElementById('homebutton').classList.toggle('darkfont');         // home kopceto vo toolbarot
     document.getElementById('searchbar').classList.toggle('darkfont');          // search barot vo toolbarot fontot koga kje se napise nesto
-    document.getElementsByClassName('example-form-field')[0].classList.toggle('darkplaceholder');
+    document.getElementsByClassName('example-form-field')[0].classList.toggle('darkplaceholder'); //search placeholderot
+    document.getElementById('scroll').classList.toggle('darkscroll');       //pozadinata na scrollbar
+    document.getElementById('scroll').classList.toggle('darkscr');          //scroll
 
     if (this.flag === true) {
       (document.getElementById('logo') as HTMLImageElement).src = 'assets/icon.ico';
@@ -55,3 +58,4 @@ export class AppComponent {
     }
   }
 }
+
