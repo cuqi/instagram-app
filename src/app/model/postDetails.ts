@@ -1,4 +1,3 @@
-
 export interface PostComments {
     username: string;
     comment: string;
@@ -14,20 +13,18 @@ export interface PostDetails {
     likes: number;
     isLiked: boolean;
     flaglike: boolean;
-
-    //likedby: string[];
 }
 
-export function gg(k:PostDetails) { // funkcija za "brishenje" na srceto pri like
-    k.flaglike = false;    
+export function gg(k: PostDetails) {       // funkcija za "brishenje" na srceto pri like
+    k.flaglike = false;
 }
 
-export function addComment(k:PostDetails, comm: any) {      //funkcija za dodavanje na komentar
-    var el:PostComments = {username:"", comment:""};
-    el.username = "Filip Panchevski";
+export function addComment(k: PostDetails, comm: any) {     // funkcija za dodavanje na komentar
+    const el: PostComments = {username: '', comment: ''};
+    el.username = 'Filip Panchevski';
     el.comment = comm;
     k.comments.push(el);
-
+}
 
 
 /*
@@ -49,4 +46,3 @@ export function addComment(k:PostDetails, comm: any) {      //funkcija za dodava
 
     k.comments = newc;
 */
-}

@@ -8,39 +8,34 @@ import { generate, from } from 'rxjs';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
+
 export class PostComponent implements OnInit {
 
+  @Input()
+    posts: PostDetails;
 
-  clicked: number = 0;
+  constructor() {  }
+  clicked = 0;
+
+  ngOnInit() { }
+
   onClickSubmit(formData) {
-    console.log(formData) // sakav da vidam samo kako izgleda objektot koj se prakja 
-    setTimeout(addComment,10, this.posts, formData.comment);  // ne znam kako na drug nacin da ja povikam UPS!! funkcija za dodavanje na komentar
+    console.log(formData); // sakav da vidam samo kako izgleda objektot koj se prakja
+    // ne znam kako na drug nacin da ja povikam UPS!! funkcija za dodavanje na komentar
+    setTimeout(addComment, 10, this.posts, formData.comment);
    }
 
   onLike() {
-  if(!this.posts.isLiked)
-  {
-    console.log(this.posts.flaglike)
-    this.posts.likes += 1;
-    this.posts.isLiked = true;
-    this.posts.flaglike = true;
-    setTimeout(gg,500, this.posts);
-    console.log(this.posts.flaglike);
-    
+    if (!this.posts.isLiked) {
+      console.log(this.posts.flaglike);
+      this.posts.likes += 1;
+      this.posts.isLiked = true;
+      this.posts.flaglike = true;
+      setTimeout(gg, 500, this.posts);
+      console.log(this.posts.flaglike);
+    } else {
+      this.posts.flaglike = true;
+      setTimeout(gg, 500, this.posts);
+    }
   }
-  else
-  {
-    this.posts.flaglike = true;
-    setTimeout(gg,500, this.posts);
-  }
-    
-  }
-  constructor() {  }
-
-  @Input()
-  posts: PostDetails;
-
-  ngOnInit() {
-  }
-
 }
