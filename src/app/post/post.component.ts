@@ -21,8 +21,13 @@ export class PostComponent implements OnInit {
 
   onClickSubmit(formData) {
     console.log(formData); // sakav da vidam samo kako izgleda objektot koj se prakja
-    // ne znam kako na drug nacin da ja povikam UPS!! funkcija za dodavanje na komentar
-    setTimeout(addComment, 10, this.posts, formData.comment);
+    var isit: string[];
+    isit = formData.comment.split(" ");
+    console.log(isit)
+    if(isit[0] != '')  //da ne moze da se ostavaat prazni komentari
+    {
+    setTimeout(addComment, 10, this.posts, formData.comment);    // ne znam kako na drug nacin da ja povikam UPS!! funkcija za dodavanje na komentar
+    }
    }
 
   onLike() {
