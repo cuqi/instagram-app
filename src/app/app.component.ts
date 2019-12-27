@@ -12,12 +12,12 @@ export class AppComponent {
 
   thePosts: PostDetails[] = [];
   flag = true;
+
     // * inicijaliziranje na postovite preku service
-  constructor(private apiService: FeitgramServiceService) {
-    // this.apiService.getPosts().subscribe((recievedPosts) => {
-    //   this.thePosts = recievedPosts;
-    // });
-    this.getPosts();
+  constructor(public apiService: FeitgramServiceService) {
+    this.apiService.getPosts().subscribe((recievedPosts) => {
+      this.thePosts = recievedPosts;
+    });
   }
 
   ngInit() { }
@@ -53,11 +53,5 @@ export class AppComponent {
       (document.getElementById('logo') as HTMLImageElement).src = 'favicon.ico';
       this.flag = true;
     }
-  }
-
-  getPosts() {
-    this.apiService.getPosts().subscribe((receivedPosts) => {
-      this.thePosts = receivedPosts;
-    });
   }
 }
