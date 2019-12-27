@@ -1,6 +1,6 @@
 <div>
   <mat-toolbar class="mat-toolbar" id="toolbar">
-    
+
     <button class="mat-button" mat-button id="homebutton">
       <img src="favicon.ico" height="50px" width="50px" id="logo">
       Home
@@ -18,7 +18,7 @@
 
   </mat-toolbar>
 
-  <app-post *ngFor="let varposts of total" [posts]="varposts">
+  <app-post *ngFor="let varposts of thePosts" [posts]="varposts">
   </app-post>
 
 </div>

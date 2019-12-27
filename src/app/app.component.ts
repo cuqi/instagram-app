@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Posts } from '../db-data';
+import { FeitgramServiceService } from './feitgram-service.service';
+import { PostDetails, addComment, gg } from './model/postDetails';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,16 @@ import { Posts } from '../db-data';
 
 export class AppComponent {
 
-  total = Posts;
+  thePosts: PostDetails[] = [];
   flag = true;
+
+    // * inicijaliziranje na postovite preku service
+  constructor(public apiService: FeitgramServiceService) {
+    this.apiService.getPosts().subscribe((recievedPosts) => {
+      this.thePosts = recievedPosts;
+    });
+  }
+
   ngInit() { }
 
   onClickSubmit(formData) { // search in toolbar

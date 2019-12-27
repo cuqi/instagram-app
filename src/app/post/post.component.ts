@@ -15,7 +15,7 @@ export class PostComponent implements OnInit {
     posts: PostDetails;
 
   constructor() {  }
-  clicked: number = 0;
+  clicked = 0;
 
   ngOnInit() { }
 
