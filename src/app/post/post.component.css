@@ -21,6 +21,7 @@ em {
 .spacer {
     height: 1px;
     background-color: gray;
+    margin-bottom: 15px;
 }
 
 .liked {
