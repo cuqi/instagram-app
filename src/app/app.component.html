@@ -1,7 +1,7 @@
 <div>
   <mat-toolbar class="mat-toolbar" id="toolbar">
 
-    <button class="mat-button" mat-button id="homebutton">
+    <button class="mat-button" mat-button id="homebutton" onclick="document.location.reload()">
       <img src="favicon.ico" height="50px" width="50px" id="logo">
       Home
     </button>
@@ -18,7 +18,9 @@
 
   </mat-toolbar>
 
-  <app-post *ngFor="let varposts of thePosts" [posts]="varposts">
-  </app-post>
+  <cdk-virtual-scroll-viewport [itemSize]="50" style="height: 690px" id="scroll" >
+    <app-post *cdkVirtualFor="let varposts of thePosts" [posts]="varposts" >
+    </app-post>
+  </cdk-virtual-scroll-viewport>
 
 </div>

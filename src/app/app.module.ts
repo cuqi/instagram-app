@@ -14,6 +14,7 @@ import { PostComponent } from './post/post.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { BindingFlags } from '@angular/compiler/src/core';
 
 @NgModule({
   declarations: [
@@ -38,3 +39,5 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

@@ -14,6 +14,7 @@ export class PostComponent implements OnInit {
   @Input()
     posts: PostDetails;
 
+
   constructor() {  }
   clicked = 0;
 
