@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FeitgramServiceService } from './feitgram-service.service';
 import { PostDetails, addComment, gg } from './model/postDetails';
+import { Form } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -22,8 +23,33 @@ export class AppComponent {
 
   ngInit() { }
 
-  onClickSubmit(formData) { // search in toolbar
-    alert('You searched for: ' + formData.search + ', but this webpage is kinda basic, sorry for the inconvenience!');
+  onClickSubmit() { // search in toolbar
+    var gt = (<HTMLFormElement>document.getElementById("searchbar")).value.toLowerCase();
+    var posts = this.thePosts;
+    window.location.hash = '';
+    var empty = gt.split(' ');
+    if(empty[0] == "")     //nisto da ne se slucuva koga ne e vnesena vrednost
+    {
+      return ;
+    }
+
+    for(var i = 0; i<this.thePosts.length; i++)
+    {
+      if(this.thePosts[i].username.toLowerCase() == gt)       //prebaruvanje na usernames od postovite
+      {
+        return window.location.hash = (this.thePosts[i].id).toString();
+      }
+      for(var j = 0; j<posts[i].comments.length;j++)
+        {
+          if(posts[i].comments[j].username.toLowerCase() == gt)
+          {
+            return window.location.hash = (this.thePosts[i].id).toString();       //prebaruvanje na usernames od komentarite
+          }
+        }
+    }
+    alert('We couldn\'t find "' + gt + '" on this webpage, sorry for the inconvenience!');
+
+    console.log(gt);
   }
 
   checkbox1() {  // DarkMode
